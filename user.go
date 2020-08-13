@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"fmt"
 )
 
 func main() {
@@ -15,8 +14,8 @@ func main() {
 }
 
 func login(context *gin.Context) {
-	Account := context.Query("account")
-	Password := context.Query("password")
+	Account := context.Query("Account")
+	Password := context.Query("Password")
 
 	message := Account + " is " + Password
 	context.String(http.StatusOK, message)
